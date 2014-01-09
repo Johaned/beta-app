@@ -62,7 +62,7 @@ end
 gem 'unicorn'
 
 group :development do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'debugger'
   gem 'capistrano', '2.13.5'
   gem 'capistrano-ext'
   gem 'letter_opener'
