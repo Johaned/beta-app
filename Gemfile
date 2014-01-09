@@ -1,37 +1,110 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.14.rc2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'mongoid', '2.4.5'
+gem 'bson', '~> 1.4.0'
+gem 'bson_ext', '~> 1.4.0'
+gem 'mongoid_slug'
+gem 'state_machine'
+gem 'sass'
+gem 'haml'
+gem 'haml-rails'
+gem 'mongoid-paperclip', :require => 'mongoid_paperclip' #paperclip 3.1.4
+#gem "aws-s3",            :require => "aws/s3"
+#gem 'aws-sdk'
+gem 'devise'
+#gem 'yubikey'
+gem 'devise_invitable', :git => 'https://github.com/scambra/devise_invitable.git'
+gem 'will_paginate', '3.0.0'
+gem 'cancan'
+gem 'jquery-rails'
+#gem 'remotipart'
+gem 'tinymce-rails'
+gem 'google_visualr', '>= 2.1'
+#gem 'rake', '0.9.2.2'
+#gem 'rubyzip'
+gem 'compass'
+#gem 'exception_notification', :require => 'exception_notifier'
+# gem 'clamav', '0.4.1'
+gem 'therubyracer', '0.12.0'
+#gem 'brakeman'
+#gem 'rvm-capistrano'
+gem 'pdfkit'
+#gem 'gzip'
+gem 'resque', :require => 'resque/server'
+gem 'resque-logger'
+gem 'nested_form', '~> 0.3.1'
+gem 'wicked'
+#gem 'RedCloth'
+#gem 'pdf-reader'
+#gem 'validates_timeliness', '~> 3.0.14'
 
+gem 'backup'
+#gem 'fog', '~> 1.4.0'
+#gem 'parallel', '~> 0.5.12'
 
+gem 'draper', '~> 1.3'
 
-# Gems used only for assets and not required
-# in production environments by default.
+#gem 'chronic'
+
+#gem 'whenever', :require => false
+
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  #gem 'uglifier'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  #gem 'compass', '~> 0.12.alpha'
+  gem 'compass-rails'
 end
 
-gem 'jquery-rails'
+gem 'unicorn'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :development do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'capistrano', '2.13.5'
+  gem 'capistrano-ext'
+  gem 'letter_opener'
+  gem 'unicorn'
+  gem 'guard-rspec'
+  gem 'rvm-capistrano'
+  gem 'jazz_hands'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :test do
+  gem 'jasmine'
+  gem 'jasmine-headless-webkit'
+  #gem 'poltergeist'
+  gem 'headless'
+  gem 'capybara-webkit'
+  gem 'pickle'
+  gem 'flog'
+  gem 'ci_reporter'
+  gem 'minitest-reporters', '>= 0.4.1' #JB for use in Rubymine IDE
+  gem 'faker'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
+  gem 'rspec-rails','2.11.0'
+  gem 'capybara', '1.1.2'
+  gem 'cucumber-rails','1.3.0', :require => false
+  gem 'database_cleaner','0.8.0'
+  gem 'machinist_mongo',  :git => 'https://github.com/nmerouze/machinist_mongo.git', :require => 'machinist/mongoid', :branch => 'machinist2'
+  gem 'selenium-webdriver', '>= 2.30.0'
+  gem 'factory_girl', '~> 4.2.0'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-nav'
+  gem 'awesome_print'
+  #gem 'spork', '~> 1.0rc'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+group :production, :new_production do
+  gem 'uglifier'
+end
 
-# To use debugger
-# gem 'debugger'
+#gem 'passenger', :group => [:production, :staging]
+
+#gem 'unicorn', :group => [:development, :new_production, :vagrant]
+#gem 'capistrano-nginx-unicorn', require: false, group: :development
