@@ -1,4 +1,7 @@
 BetaApp::Application.routes.draw do
+  resources :tags
+
+
   devise_for :users
 
   # The priority is based upon order of creation:
