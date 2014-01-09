@@ -1,0 +1,21 @@
+%h1 Listing edocs
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @edocs.each do |edoc|
+    %tr
+      %td= edoc.name
+      %td= edoc.description
+      %td= link_to 'Show', edoc
+      %td= link_to 'Edit', edit_edoc_path(edoc)
+      %td= link_to 'Destroy', edoc, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Edoc', new_edoc_path

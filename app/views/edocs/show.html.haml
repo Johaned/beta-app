@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @edoc.name
+%p
+  %b Description:
+  = @edoc.description
+
+= link_to 'Edit', edit_edoc_path(@edoc)
+\|
+= link_to 'Back', edocs_path

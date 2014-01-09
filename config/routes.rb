@@ -1,4 +1,7 @@
 BetaApp::Application.routes.draw do
+  resources :edocs
+
+
   resources :tenants
 
 

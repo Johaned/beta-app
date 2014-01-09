@@ -1,0 +1,16 @@
+= form_for @edoc do |f|
+  - if @edoc.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@edoc.errors.count, "error")} prohibited this edoc from being saved:"
+      %ul
+        - @edoc.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions
+    = f.submit 'Save'
