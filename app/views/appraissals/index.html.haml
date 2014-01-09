@@ -1,0 +1,21 @@
+%h1 Listing appraissals
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @appraissals.each do |appraissal|
+    %tr
+      %td= appraissal.name
+      %td= appraissal.description
+      %td= link_to 'Show', appraissal
+      %td= link_to 'Edit', edit_appraissal_path(appraissal)
+      %td= link_to 'Destroy', appraissal, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Appraissal', new_appraissal_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @appraissal.name
+%p
+  %b Description:
+  = @appraissal.description
+
+= link_to 'Edit', edit_appraissal_path(@appraissal)
+\|
+= link_to 'Back', appraissals_path
