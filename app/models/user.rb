@@ -38,5 +38,5 @@ class User
   # field :locked_at,       :type => Time
 
   has_many :tags, as: :taggable
-  
+
 end
