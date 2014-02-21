@@ -8,6 +8,7 @@ BetaApp::Application.routes.draw do
   # end
 
   post 'notifications/inbound_email', to: 'notifications#inbound_email', as: 'inbound_email_notifications'
+  get 'notifications/inbound_email', to: 'welcome#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
