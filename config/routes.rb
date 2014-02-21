@@ -1,5 +1,13 @@
 BetaApp::Application.routes.draw do
   devise_for :users
+  
+  # resource :notifications do
+  #   collection do 
+  #     post :inbound_email
+  #   end 
+  # end
+
+  post 'notifications/inbound_email', to: 'notifications#inbound_email', as: 'inbound_email_notifications'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
