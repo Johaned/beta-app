@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.14.rc2'
-
+gem 'ruby-hmac'
 gem 'mongoid', '2.4.5'
 gem 'bson', '~> 1.4.0'
 gem 'bson_ext', '~> 1.4.0'
