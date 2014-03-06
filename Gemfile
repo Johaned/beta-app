@@ -57,6 +57,7 @@ group :assets do
 
   #gem 'compass', '~> 0.12.alpha'
   gem 'compass-rails'
+  gem 'jquery-fileupload-rails'
 end
 
 gem 'unicorn'
