@@ -18,7 +18,7 @@ gem 'devise'
 gem 'devise_invitable', :git => 'https://github.com/scambra/devise_invitable.git'
 gem 'will_paginate', '3.0.0'
 gem 'cancan'
-gem 'jquery-rails'
+gem 'jquery-rails', "~> 2.1.3"
 #gem 'remotipart'
 gem 'tinymce-rails'
 gem 'google_visualr', '>= 2.1'
@@ -57,7 +57,7 @@ group :assets do
 
   #gem 'compass', '~> 0.12.alpha'
   gem 'compass-rails'
-  gem 'jquery-fileupload-rails'
+  gem 'jquery-fileupload-rails', :git => 'git://github.com/Johaned/jquery-fileupload-rails'
 end
 
 gem 'unicorn'

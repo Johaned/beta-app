@@ -1,0 +1,15 @@
+<h1>Painting Gallery</h1>
+
+<div id="paintings">
+  <%= render @paintings %>
+</div>
+<div class="clear"></div>
+
+<%= form_for Painting.new do |f| %>
+  <%= f.label :image, "Upload paintings:" %>
+  <%= f.file_field :image, name: "painting[image]" %>
+<% end %>
+
+<div id="progress">
+    <div class="bar" style="width: 0%;"></div>
+</div>
