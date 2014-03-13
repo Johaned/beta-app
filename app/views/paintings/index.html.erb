@@ -8,6 +8,7 @@
 <%= form_for Painting.new do |f| %>
   <%= f.label :image, "Upload paintings:" %>
   <%= f.file_field :image, name: "painting[image]" %>
+  <%= f.submit 'Save', class: 'save' %>
 <% end %>
 
 <div id="progress">
