@@ -11,6 +11,7 @@ gem 'sass'
 gem 'haml'
 gem 'haml-rails'
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip' #paperclip 3.1.4
+gem 'grape'
 #gem "aws-s3",            :require => "aws/s3"
 #gem 'aws-sdk'
 gem 'devise'

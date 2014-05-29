@@ -44,8 +44,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  config.include(MailerMacros)
-
   config.before(:each) do |x|
     if x.example.metadata[:demo_data].blank? # Only do this if not using demo data
       # p "BEFORE EACH: DatabaseCleaner.clean and make a Tenant and Medic Role"
