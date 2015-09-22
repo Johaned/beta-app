@@ -1,8 +1,8 @@
-class TestForm
+class TestForm < Reform::Form
   property :title
   validates :title, presence: true
 
-  property :artist do
+  property :artiste do
     property :full_name
     validates :full_name, presence: true
   end

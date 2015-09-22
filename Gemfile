@@ -46,6 +46,7 @@ gem 'draper', '~> 1.3'
 #gem 'whenever', :require => false
 
 gem 'reform'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails'
