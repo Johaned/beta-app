@@ -50,6 +50,8 @@ gem 'draper', '~> 1.3'
 
 #gem 'whenever', :require => false
 
+gem 'reform'
+
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
