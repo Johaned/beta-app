@@ -30,6 +30,9 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_attr (0.8.2)
+      activemodel (>= 3.0.2, < 4.1)
+      activesupport (>= 3.0.2, < 4.1)
     activemodel (3.2.18)
       activesupport (= 3.2.18)
       builder (~> 3.0.0)
@@ -85,6 +88,7 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.3)
       climate_control (>= 0.0.3, < 1.0)
+    cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -418,6 +422,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_attr
   awesome_print
   backup
   cancan
@@ -426,6 +431,7 @@ DEPENDENCIES
   capybara (= 1.1.2)
   capybara-webkit
   ci_reporter
+  cocoon
   coffee-rails
   compass
   compass-rails

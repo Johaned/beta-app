@@ -1,0 +1,16 @@
+= simple_form_for @album, url: create_album_path do |f|
+  = f.input :title
+  = f.simple_fields_for :artiste do |g|
+    = g.input :full_name
+    #addresses
+      = g.simple_fields_for :addresses do |h|
+        = render 'address_fields', f: h
+      .links
+        = link_to_add_association 'add address', g, :addresses
+  #songs
+    = f.simple_fields_for :songs do |g|
+      = g.input :name
+      = g.input :record_producer_id
+    .links
+      = link_to_add_association 'add song', f, :songs
+  = f.button :submit

@@ -1,6 +1,12 @@
 BetaApp::Application.routes.draw do
   devise_for :users
 
+  scope :album do
+    get 'test_form', to: 'welcome#test_form'
+    get 'dog_page', to: 'welcome#dog_page'
+    post 'create_album', to: 'welcome#create_album'
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

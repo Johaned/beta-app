@@ -1,0 +1,13 @@
+= simple_form_for @dog, url: create_album_path do |f|
+  = f.input :name
+  = f.input :breed
+  #fleas
+    = f.simple_fields_for :fleas do |g|
+      = render 'flea_fields', f: g
+  .links
+    = link_to_add_association 'add flea', f, :fleas, force_non_association_create: true
+  #physical_description
+    = f.simple_fields_for :physical_description do |g|
+      = g.input :size
+      = g.input :weight
+  = f.button :submit

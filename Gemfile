@@ -47,6 +47,8 @@ gem 'draper', '~> 1.3'
 
 gem 'reform'
 gem 'simple_form'
+gem 'cocoon'
+gem 'active_attr'
 
 group :assets do
   gem 'sass-rails'

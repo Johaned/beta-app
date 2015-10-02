@@ -1,4 +1,7 @@
-class TestForm < Reform::Form
+class AlbumForm < Reform::Form
+  include Reform::Form::Mongoid
+  include ActiveModel::ModelReflections
+  
   property :title
   validates :title, presence: true
 
